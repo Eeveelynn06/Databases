@@ -1,6 +1,6 @@
 lName = ""
 
-def file(database):
+def File(database):
     match database:
         case 1:
             return "Library-Database.txt"
@@ -11,20 +11,20 @@ def file(database):
 
 #Add a new book
 def append(string, file):
-    lName = file(file)
+    lName = File(file)
     with open(lName, "a") as a:
         a.write("\n" + string)
 
 #Correct a book input (availability)
 def overwrite(string, line, file):
-    lName = file(file)
+    lName = File(file)
     with open(lName, "w") as w:
         w.seek(line)
         w.write(string)
 
 #Read entire database
 def read(file):
-    lName = file(file)
+    lName = File(file)
     with open(lName, "r") as r:
         lines_list = r.readlines()
     x = 0
@@ -34,7 +34,7 @@ def read(file):
 
 #read a specific line
 def readLine(line, file):
-    lName = file(file)
+    lName = File(file)
     with open(lName, "r") as r:
             lines_list = r.readlines()
     print(lines_list[line])
@@ -43,7 +43,7 @@ def readLine(line, file):
 #Find a book without knowing where it is
 #Find using a term
 def find(searchTerm, file):
-    lName = file(file)
+    lName = File(file)
     with open(lName,"r") as f:
         lines_list = f.readlines()
     x = 0
@@ -55,7 +55,7 @@ def find(searchTerm, file):
 #Add a book in the middle of the database
 #For the case of adding to Genre
 def add(Name, Author, ISBN, Genre, Available, file):
-    lName = file(file)
+    lName = File(file)
     with open(lName, "r") as aIG:
         lines_list = aIG.readlines()
     x = 0
@@ -88,7 +88,7 @@ def add(Name, Author, ISBN, Genre, Available, file):
 
 #Move list down one index, starting from point
 def budge(fromIndex, file):
-    lName = file(file)
+    lName = File(file)
     with open(lName, "r") as f:
         lines_list_orig = f.readlines()
         f.seek(0)
