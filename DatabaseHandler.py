@@ -15,7 +15,7 @@ def append(string, file):
     with open(lName, "a") as a:
         a.write("\n" + string)
 
-#Correct a book input (availability)
+#Correct a book input (availability typically)
 def overwrite(string, line, file):
     lName = File(file)
     with open(lName, "w") as w:
