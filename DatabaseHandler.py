@@ -1,4 +1,4 @@
-lName = ""
+lName = "Library-Database"
 
 def File(database):
     match database:
@@ -79,12 +79,12 @@ def add(Name, Author, ISBN, Genre, Available, file):
             break
         authorLine += 1
     if nameLine != 0:
-        budge(nameLine)
+        budge(nameLine, 1)
         with open(lName, "w") as aIG:
             aIG.seek(nameLine)
             aIG.write(Name + " , " +  Author + " , " + ISBN + " , " + Genre + " , " + Available)
     else:
-        append(Name + " , " +  Author + " , " + ISBN + " , " + Genre + " , " + Available)
+        append(Name + " , " +  Author + " , " + ISBN + " , " + Genre + " , " + Available, 1)
 
 #Move list down one index, starting from point
 def budge(fromIndex, file):

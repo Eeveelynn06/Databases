@@ -1,6 +1,4 @@
 
-test , test , tes , test , test
-test2 , test2 , test2 , test2 , test2
-test3 , test3 , test , test3 , test3
-test4 , test4 , test4 , test4 , test4
-test5 , test5 , test5 , test5 , test5
+Chainsaw Man Vol.6 , Fujimoto Tatsuki , 978-1-9747-2071-2 , Action , Available
+Chainsaw Man Vol.7 , Fujimoto Tatsuki , 978-1-9747-2071-2 , Action , Available
+Chainsaw Man Vol.8 , Fujimoto Tatsuki , 978-1-9747-2071-2 , Action , Available
