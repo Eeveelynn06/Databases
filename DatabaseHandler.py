@@ -84,7 +84,7 @@ def add(Name, Author, ISBN, Genre, Available, file):
             aIG.seek(nameLine)
             aIG.write(Name + " , " +  Author + " , " + ISBN + " , " + Genre + " , " + Available)
     else:
-        append(Name + " , " +  Author + " , " + ISBN + " , " + Genre + " , " + Available, 1)
+        append(Name + " , " +  Author + " , " + ISBN + " , " + Genre + " , " + Available)
 
 #Move list down one index, starting from point
 def budge(fromIndex, file):
@@ -100,3 +100,24 @@ def budge(fromIndex, file):
             pass
     with open(lName, "w") as f:
         f.writelines(lines_list)
+
+#Add a new student to a books waitlist
+def Waitlist(bookIndex, newStudentIndex):
+    lname = File("Library-Database.txt")
+    sname = File("Student-Database.txt")
+    with open(lname, "r+w") as f:
+        book = f.seek(bookIndex)
+
+
+def FindStudentID(studentIndex):
+    studentID = ""
+    lname = File("Student-Database.txt")
+    with open(lname, "r") as f:
+        student = f.seek(studentIndex, 0)
+        for char in student:
+            if char == ",":
+                break
+            else:
+                studentID = studentID + char
+            break
+        return studentID
